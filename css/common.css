@@ -230,24 +230,28 @@ footer hr {
     box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
   }
 }
-
 /* Navigation Styles */
 .nav-link {
-  font-weight: 500;
-  color      : white !important;
-  white-space: nowrap;
+    position: relative;
+    font-weight: 500;
+    color: white !important;
+    white-space: nowrap;
+    transition: transform 0.25s ease, font-weight 0.25s ease, text-shadow 0.25s ease;
 }
 
-.nav-link:hover {
-  color: #d7ead3 !important;
-  /* Bootstrap blue color */
-}
+    /* Hover Effect */
+    .nav-link:hover {
+        color: #d7ead3 !important;
+        font-weight: 700;
+        transform: scale(1.1);
+/*        text-shadow: 0 0 8px rgba(215, 234, 211, 0.5);*/
+    }
 
-.nav-link.active {
-  color      : #d7ead3 !important;
-  /* Bootstrap blue color */
-  font-weight: 600;
-}
+    /* Active Navigation */
+    .nav-link.active {
+        color: #d7ead3 !important;
+        font-weight: 700;
+    }
 
 /* Dropdown Styles - Base styles only */
 .dropdown-menu {
