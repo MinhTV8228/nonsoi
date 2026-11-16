@@ -359,11 +359,11 @@ class CartTrang {
     });
     
     const shipping = 0; // Free shipping
-    const tax = subtotal * 0.08; // 8% tax
-    const total = subtotal + shipping + tax;
+    const vat = subtotal * 0.05; // 5% VAT
+    const total = subtotal + shipping + vat;
     
     $('#subtotal').text(window.formatVND(subtotal));
-    $('#tax').text(window.formatVND(tax));
+    $('#vat').text(window.formatVND(vat));
     $('#total').text(window.formatVND(total));
     
     // Update checkout button
