@@ -1,5 +1,16 @@
 ﻿/* Cart Page Styles */
+/* Ẩn trên Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+/* Ẩn trên Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
 .cart-section {
   min-height: calc(100vh - 200px);
   background-color: #f8f9fa;
@@ -260,10 +271,25 @@
     width: 100%;
     margin-top: 1rem;
   }
-  
-  .quantity-input {
-    width: 50px;
-  }
+
+    .quantity-input {
+        border: none;
+        text-align: center;
+        width: 60px;
+        padding: 0.5rem 0.25rem;
+        background: white;
+        font-weight: 600;
+        /* Ẩn nút tăng giảm trên Firefox */
+        -moz-appearance: textfield !important;
+        appearance: textfield !important;
+    }
+
+    /* Ẩn nút tăng giảm trên Chrome, Safari, Edge, Opera */
+    .quantity-input::-webkit-outer-spin-button,
+    .quantity-input::-webkit-inner-spin-button {
+        -webkit-appearance: none !important;
+        margin: 0;
+    }
   
   .checkout-actions .btn {
     font-size: 0.9rem;
