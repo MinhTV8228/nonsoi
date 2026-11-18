@@ -510,7 +510,3 @@ window.addToCart = function (id, name, price, image, showAlert = true) {
 // Debug logging
 console.log('Cart system initialized');
 console.log('Test cart with: window.testCart()');
-
-
-
-

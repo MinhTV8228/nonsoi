@@ -473,7 +473,3 @@ window.updateWishlistButtonStates = function() {
 $(document).ready(function() {
   setTimeout(updateWishlistButtonStates, 500);
 });
-
-
-
-
