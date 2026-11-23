@@ -1147,7 +1147,9 @@ body {
 }
 
 .nav-link.active,
-.cart-icon.active {
+.nav-link[aria-current="page"],
+.cart-icon.active,
+.cart-icon[aria-current="page"] {
   color      : var(--header-beige) !important;
   font-weight: 600;
   text-decoration: none !important;
@@ -1160,14 +1162,16 @@ body {
   text-decoration: none !important;
 }
 
-.wishlist-icon.active {
+.wishlist-icon.active,
+.wishlist-icon[aria-current="page"] {
   color      : var(--header-beige) !important;
   font-weight: 600;
   text-decoration: none !important;
 }
 
 /* Special handling for dropdown toggle */
-.nav-link.dropdown-toggle.active {
+.nav-link.dropdown-toggle.active,
+.nav-link.dropdown-toggle[aria-current="page"] {
   color      : var(--header-beige) !important;
   font-weight: 600;
 }

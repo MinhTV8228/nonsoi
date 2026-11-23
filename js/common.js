@@ -503,7 +503,14 @@ function setActiveNavItem() {
   const navLinks = document.querySelectorAll('.nav-link[data-page], .wishlist-icon[data-page], .cart-icon[data-page]');
 
   navLinks.forEach(function (link) {
-    link.classList.toggle('active', Boolean(currentPage) && link.getAttribute('data-page') === currentPage);
+    const isActive = Boolean(currentPage) && link.getAttribute('data-page') === currentPage;
+    link.classList.toggle('active', isActive);
+
+    if (isActive) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
   });
 }
 
@@ -526,6 +533,7 @@ function getCurrentTrangName() {
     'cart.html': 'cart',
     // Product pages
     'all-products.html': 'products',
+    'towels.html': 'products',
     'bath-robes.html': 'products',
     'bath-towels.html': 'products',
     'face-towels.html': 'products',
