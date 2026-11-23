@@ -331,7 +331,10 @@
   <script>
     // Load header and footer components
     $(document).ready(function () {
-      $('#header-placeholder').load('components/header.html');
+      $('#header-placeholder').load('components/header.html', function () {
+        if (typeof window.initializeHeaderComponents === 'function') window.initializeHeaderComponents();
+        if (typeof setActiveNavItem === 'function') setActiveNavItem();
+      });
       $('#footer-placeholder').load('components/footer.html');
 
       // Smooth scrolling for anchor links

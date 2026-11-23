@@ -66,12 +66,19 @@ document.addEventListener('keydown', function (event) {
 window.initializeHeaderComponents = function () {
   initializeNavbar();
   setActiveNavItem();
+  scheduleActiveNavRefresh();
 
   // Initialize submenu handlers after header loads
   setTimeout(function () {
     initializeSubmenuHandlers();
   }, 100);
 };
+
+function scheduleActiveNavRefresh() {
+  [0, 100, 500, 1000].forEach(function (delay) {
+    setTimeout(setActiveNavItem, delay);
+  });
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   // Initialize navbar functionality - will be called after header loads
@@ -81,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (headerPlaceholder) {
     const headerObserver = new MutationObserver(function () {
       setActiveNavItem();
+      scheduleActiveNavRefresh();
       if (window.cartManager) window.cartManager.updateCartUI();
       if (window.wishlistManager) window.wishlistManager.updateWishlistUI();
     });
@@ -503,7 +511,17 @@ function setActiveNavItem() {
   const navLinks = document.querySelectorAll('.nav-link[data-page], .wishlist-icon[data-page], .cart-icon[data-page]');
 
   navLinks.forEach(function (link) {
-    const isActive = Boolean(currentPage) && link.getAttribute('data-page') === currentPage;
+    let isActive = Boolean(currentPage) && link.getAttribute('data-page') === currentPage;
+
+    if (!isActive && link.classList.contains('nav-link')) {
+      const href = link.getAttribute('href');
+      if (href) {
+        const hrefPage = href.split(/[?#]/)[0].split('/').pop().toLowerCase();
+        const currentFilename = window.location.pathname.split('/').pop().toLowerCase();
+        isActive = hrefPage === currentFilename;
+      }
+    }
+
     link.classList.toggle('active', isActive);
 
     if (isActive) {
