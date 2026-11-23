@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Set active navigation item
   setActiveNavItem();
+  scheduleActiveNavRefresh();
 
   // Initialize animations
   initializeAnimations();
@@ -511,16 +512,7 @@ function setActiveNavItem() {
   const navLinks = document.querySelectorAll('.nav-link[data-page], .wishlist-icon[data-page], .cart-icon[data-page]');
 
   navLinks.forEach(function (link) {
-    let isActive = Boolean(currentPage) && link.getAttribute('data-page') === currentPage;
-
-    if (!isActive && link.classList.contains('nav-link')) {
-      const href = link.getAttribute('href');
-      if (href) {
-        const hrefPage = href.split(/[?#]/)[0].split('/').pop().toLowerCase();
-        const currentFilename = window.location.pathname.split('/').pop().toLowerCase();
-        isActive = hrefPage === currentFilename;
-      }
-    }
+    const isActive = Boolean(currentPage) && link.getAttribute('data-page') === currentPage;
 
     link.classList.toggle('active', isActive);
 
