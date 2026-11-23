@@ -2,6 +2,7 @@
 :root {
   --brand-green: #32582b;
   --page-background: #faf7ca;
+  --header-beige: #f5f5dc;
 }
 
 .bg-light-pink {
@@ -236,20 +237,20 @@ footer hr {
     font-weight: 500;
     color: white !important;
     white-space: nowrap;
-    transition: transform 0.25s ease, font-weight 0.25s ease, text-shadow 0.25s ease;
+    text-decoration: none !important;
+    transition: transform 0.25s ease, color 0.25s ease, font-weight 0.25s ease;
 }
 
     /* Hover Effect */
     .nav-link:hover {
-        color: #d7ead3 !important;
+        color: var(--header-beige) !important;
         font-weight: 700;
         transform: scale(1.1);
-/*        text-shadow: 0 0 8px rgba(215, 234, 211, 0.5);*/
     }
 
     /* Active Navigation */
     .nav-link.active {
-        color: #d7ead3 !important;
+        color: var(--header-beige) !important;
         font-weight: 700;
     }
 
@@ -1145,81 +1146,40 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Nav links and cart icon - Blue color */
-.nav-link:not(.dropdown-toggle)::after,
-.cart-icon::after {
-  content         : '';
-  position        : absolute;
-  bottom          : -2px;
-  left            : 0;
-  width           : 0;
-  height          : 2px;
-  background-color: #007bff;
-  /* Bootstrap blue */
-  transition      : width 0.3s ease;
-}
-
-.nav-link:not(.dropdown-toggle).active::after,
-.cart-icon.active::after {
-  width: 100%;
-}
-
-.nav-link:not(.dropdown-toggle):hover::after,
-.cart-icon:hover::after {
-  width: 100%;
-}
-
 .nav-link.active,
 .cart-icon.active {
-  color      : #007bff !important;
-  /* Bootstrap blue */
+  color      : var(--header-beige) !important;
   font-weight: 600;
+  text-decoration: none !important;
 }
 
-/* Wishlist icon - Pink color (keep existing behavior) */
-.wishlist-icon::after {
-  content         : '';
-  position        : absolute;
-  bottom          : -2px;
-  left            : 0;
-  width           : 0;
-  height          : 2px;
-  background-color: #dc3545;
-  /* Pink color */
-  transition      : width 0.3s ease;
-}
-
-.wishlist-icon.active::after {
-  width: 100%;
-}
-
-.wishlist-icon:hover::after {
-  width: 100%;
+.nav-link:hover,
+.cart-icon:hover,
+.wishlist-icon:hover {
+  color: var(--header-beige) !important;
+  text-decoration: none !important;
 }
 
 .wishlist-icon.active {
-  color      : #dc3545 !important;
-  /* Pink color */
+  color      : var(--header-beige) !important;
   font-weight: 600;
+  text-decoration: none !important;
 }
 
 /* Special handling for dropdown toggle */
 .nav-link.dropdown-toggle.active {
-  color      : #007bff !important;
-  /* Bootstrap blue */
+  color      : var(--header-beige) !important;
   font-weight: 600;
 }
 
 /* Cart icon hover effect */
 .cart-icon:hover {
-  color: #007bff !important;
-  /* Bootstrap blue */
+  color: var(--header-beige) !important;
 }
 
-/* Wishlist icon hover effect - keep pink */
+/* Wishlist icon hover effect */
 .wishlist-icon:hover {
-  color: #dc3545 !important;
-  /* Pink color */
+  color: var(--header-beige) !important;
 }
 
 /* Header Animation Styles */
