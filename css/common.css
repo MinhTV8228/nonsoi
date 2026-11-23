@@ -2,6 +2,98 @@
  * Home page specific styles
  */
 
+:root {
+  --brand-green : #32582b;
+  --header-main : #4b5829;
+  --header-beige: #f8f9c2;
+}
+
+.bg-light-pink,
+.navbar {
+  width           : 100%;
+  background-color: var(--header-beige) !important;
+}
+
+.navbar,
+.navbar>.container-fluid,
+.navbar-collapse,
+.navbar-nav {
+  align-items: center;
+}
+
+.navbar .nav-link,
+.navbar .user-icon {
+  color      : var(--header-main) !important;
+  font-size  : 18px;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active,
+.navbar .nav-link[aria-current="page"],
+.navbar .user-icon:hover,
+.navbar .user-icon:focus {
+  color: var(--header-main) !important;
+}
+
+.navbar .user-icon {
+  display        : inline-flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+footer {
+  background-color: var(--brand-green) !important;
+  color           : #fff;
+  min-height      : 400px;
+  padding         : 40px 24px 20px;
+  box-sizing      : border-box;
+}
+
+footer .container {
+  padding-left : 12px;
+  padding-right: 12px;
+}
+
+footer h6,
+footer p,
+footer a,
+footer .text-muted {
+  color: #fff !important;
+}
+
+.user-dropdown-menu {
+  position        : absolute;
+  top             : calc(100% + 12px);
+  right           : 0;
+  z-index         : 1050;
+  display         : none;
+  min-width       : 170px;
+  padding         : 8px 0;
+  border          : 1px solid rgba(75, 88, 41, 0.2);
+  border-radius   : 8px;
+  background-color: var(--header-beige);
+  box-shadow      : 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.user-dropdown:hover .user-dropdown-menu,
+.user-dropdown:focus-within .user-dropdown-menu {
+  display: block;
+}
+
+.user-dropdown-menu .dropdown-item {
+  display        : block;
+  padding        : 10px 16px;
+  color          : var(--header-main) !important;
+  text-decoration: none;
+  white-space    : nowrap;
+}
+
+.user-dropdown-menu .dropdown-item:hover {
+  background-color: rgba(75, 88, 41, 0.1);
+}
+
 /* Hero Section Styles */
 .hero-section {
   position       : relative;

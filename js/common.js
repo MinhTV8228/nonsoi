@@ -212,7 +212,7 @@ function setActiveNavItem() {
 
     if (isActive) {
       link.setAttribute('aria-current', 'page');
-      link.style.setProperty('color', '#f5f5dc', 'important');
+      link.style.setProperty('color', 'var(--header-main)', 'important');
       link.style.setProperty('text-decoration', 'none', 'important');
     } else {
       link.removeAttribute('aria-current');
