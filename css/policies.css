@@ -174,40 +174,9 @@
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
-  .quick-links {
-    position: static;
-    margin-bottom: 40px;
-  }
-}
 
-@media (max-width: 768px) {
-  .terms-content {
-    padding: 25px 20px;
-    margin: 10px 0;
-  }
-  
-  .terms-title {
-    font-size: 1.6rem;
-  }
-  
-  .terms-section h3 {
-    font-size: 1.1rem;
-  }
-  
-  .terms-text {
-    font-size: 0.9rem;
-    text-align: left;
-  }
-  
-  .quick-links {
-    padding: 20px 15px;
-  }
-  
-  .toc-dropdown {
-    padding: 15px;
-  }
-}
+
+
 
 /* Sticky sidebar on scroll - maintain original size */
 .quick-links.sticky {
@@ -231,18 +200,8 @@
 }
 
 /* Alternative approach: always maintain fixed sizing */
-@media (min-width: 992px) {
-  .quick-links {
-    min-width: 250px;
-    max-width: 300px;
-  }
-  
-  .quick-links.sticky {
-    width: 250px; /* Fixed width when sticky */
-  }
-}
 
-/* TOC Dropdown for mobile */
+
 .toc-dropdown {
   margin-bottom: 2rem;
 }

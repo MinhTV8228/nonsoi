@@ -97,60 +97,9 @@
         }
 
 /* PC */
-@media (min-width: 1200px) {
-    .about-story {
-        min-height: 650px;
-        padding: 85px 50px;
-    }
 
-    .about-logo {
-        max-width: 300px;
-    }
-
-    .about-title {
-        font-size: 2.8rem;
-    }
-}
 
 /* Tablet */
-@media (max-width: 991px) {
-    .about-story {
-        min-height: 550px;
-        padding: 65px 25px;
-    }
 
-    .about-logo {
-        max-width: 240px;
-    }
-
-    .about-title {
-        font-size: 2.2rem;
-    }
-
-    .about-description p {
-        font-size: 1rem;
-    }
-}
 
 /* Mobile */
-@media (max-width: 576px) {
-    .about-story {
-        min-height: 100vh;
-        padding: 40px 22px;
-    }
-
-    .about-logo {
-        max-width: 210px;
-        margin-bottom: 20px;
-    }
-
-    .about-title {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-    }
-
-    .about-description p {
-        font-size: 0.9rem;
-        line-height: 1.65;
-    }
-}
