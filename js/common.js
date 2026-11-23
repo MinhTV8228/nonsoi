@@ -533,32 +533,40 @@ function setActiveNavItem() {
  */
 function getCurrentTrangName() {
   const path = window.location.pathname;
-  const filename = path.split('/').pop().toLowerCase();
+  const segments = path.split('/').filter(Boolean);
+  let filename = (segments.pop() || '').toLowerCase();
+
+  if (!filename) {
+    return 'home';
+  }
+
+  filename = filename.replace(/\.html$/i, '');
 
   // Map filenames to page names
   const pageMap = {
-    'index.html': 'home',
-    '': 'home', // Root path
-    'about.html': 'about',
-    'contact.html': 'contact',
-    'feedback.html': 'feedback',
-    'policies-and-term.html': 'policies',
-    'wishlist.html': 'wishlist',
-    'cart.html': 'cart',
+    'index': 'home',
+    'about': 'about',
+    'contact': 'contact',
+    'feedback': 'feedback',
+    'policies-and-term': 'policies',
+    'wishlist': 'wishlist',
+    'cart': 'cart',
+    'login': '',
+    'register': '',
     // Product pages
-    'all-products.html': 'products',
-    'towels.html': 'products',
-    'bath-robes.html': 'products',
-    'bath-towels.html': 'products',
-    'face-towels.html': 'products',
-    'hand-towels.html': 'products',
-    'best-sellers.html': 'products',
-    'new-products.html': 'products',
-    'sale-products.html': 'products',
-    'bath-robe-detail.html': 'products',
-    'bath-towel-detail.html': 'products',
-    'face-towel-detail.html': 'products',
-    'hand-towel-detail.html': 'products'
+    'all-products': 'products',
+    'towels': 'products',
+    'bath-robes': 'products',
+    'bath-towels': 'products',
+    'face-towels': 'products',
+    'hand-towels': 'products',
+    'best-sellers': 'products',
+    'new-products': 'products',
+    'sale-products': 'products',
+    'bath-robe-detail': 'products',
+    'bath-towel-detail': 'products',
+    'face-towel-detail': 'products',
+    'hand-towel-detail': 'products'
   };
 
   return pageMap[filename] || '';
