@@ -8,10 +8,20 @@
   --header-beige: #f8f9c2;
 }
 
-.bg-light-pink,
-.navbar {
-  width           : 100%;
+.bg-light-pink {
   background-color: var(--header-beige) !important;
+}
+
+.navbar {
+  position        : relative;
+  top             : 0;
+  right           : 0;
+  left            : 0;
+  z-index         : 1030;
+  width           : 100%;
+  background-color: transparent !important;
+  border          : 0 !important;
+  border-bottom   : 2px solid #fff !important;
 }
 
 .navbar,
@@ -21,9 +31,62 @@
   align-items: center;
 }
 
+.navbar>.container-fluid {
+  display: flex;
+}
+
+.navbar-brand {
+  flex        : 0 0 auto;
+  margin-right: 0 !important;
+}
+
+.navbar-collapse {
+  display        : flex !important;
+  flex           : 1 1 auto;
+  justify-content: space-between;
+  gap            : 24px;
+}
+
+.navbar-nav {
+  --nav-link-gap  : 90px;
+  position        : absolute;
+  top             : 50%;
+  left            : 50%;
+  display         : flex;
+  flex            : 0 0 auto;
+  width           : max-content;
+  min-width       : max-content;
+  max-width       : none;
+  align-items     : center;
+  justify-content : center;
+  gap             : var(--nav-link-gap) !important;
+  flex-wrap       : nowrap;
+  text-align      : center;
+  white-space     : nowrap;
+  margin          : 0;
+  padding         : 6px 10px;
+  border-radius   : 999px;
+  background-color: transparent;
+  border          : 1px solid var(--header-main);
+  transform       : translate(-50%, -50%);
+}
+
+.icon-group {
+  flex         : 0 0 auto;
+  margin-left  : auto !important;
+  padding-right: 12px;
+  background   : transparent;
+  position     : relative;
+  z-index      : 2;
+}
+
 .navbar .nav-link,
 .navbar .user-icon {
-  color      : var(--header-main) !important;
+  color: var(--header-main) !important;
+}
+
+.navbar .nav-link {
+  white-space: nowrap;
   font-size  : 18px;
   font-weight: 600;
 }
@@ -41,6 +104,11 @@
   display        : inline-flex;
   align-items    : center;
   justify-content: center;
+  background     : transparent;
+  position       : relative;
+  z-index        : 3;
+  font-size      : 1.9rem;
+  color          : #4c5a29 !important;
 }
 
 footer {
@@ -201,14 +269,6 @@ footer .text-muted {
   height    : auto;
   object-fit: contain;
   margin    : 0 auto 15px;
-}
-
-.new-products-description {
-  max-width  : 760px;
-  margin     : 0 auto;
-  color      : #fff;
-  font-size  : 18px;
-  line-height: 1.6;
 }
 
 /* Product image only */
@@ -435,17 +495,6 @@ footer .text-muted {
   transform : translateY(-2px);
   box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
 }
-
-/* Responsive Design */
-
-
-
-
-/* Extra small screens */
-
-
-/* Very small screens */
-
 
 /* Hover effect for Order Now buttons in carousel sections */
 #carouselWomen .btn-dark:hover,

@@ -128,19 +128,21 @@
 
 .new-products-logo {
   display   : block;
-  width     : 220px;
-  max-width : 80%;
+  width     : 320px;
+  max-width : 100%;
   height    : auto;
   object-fit: contain;
   margin    : 0 auto 15px;
 }
 
 .new-products-description {
-  max-width  : 760px;
-  margin     : 0 auto;
-  color      : #fff;
-  font-size  : 18px;
-  line-height: 1.6;
+  /* Chỉnh độ giãn dòng tại đây */
+  --new-products-description-line-height: 2;
+  max-width                             : 760px;
+  margin                                : 0 auto;
+  color                                 : #fff;
+  font-size                             : 18px;
+  line-height                           : var(--new-products-description-line-height);
 }
 
 /* Product image only */
@@ -177,60 +179,74 @@
 
 /* Brand story section */
 .story-section {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: min(1120px, calc(100% - 96px));
-  min-height: 620px;
-  margin: 90px auto;
-  background: #f5f2e8;
+  /* Chỉnh kích thước ảnh và bo góc panel tại đây */
+  --story-image-width     : 50%;
+  --story-image-height    : 500px;
+  --story-panel-radius    : 12px;
+  --story-overlap         : 50px;
+  --story-horizontal-shift: 43px;
+  position                : relative;
+  display                 : flex;
+  align-items             : center;
+  width                   : min(1120px, calc(100% - 96px));
+  margin-left             : auto;
+  margin-right            : auto;
+  min-height              : 620px;
+  margin-top              : 90px;
+  margin-bottom           : 90px;
+  background              : transparent;
+  transform               : translateX(var(--story-horizontal-shift));
 }
 
 .story-image-wrap {
-  width: 58%;
-  height: 560px;
+  width   : var(--story-image-width);
+  height  : var(--story-image-height);
   overflow: hidden;
 }
 
 .story-image {
-  display: block;
-  width: 100%;
-  height: 100%;
+  display   : block;
+  width     : 100%;
+  height    : 100%;
   object-fit: cover;
 }
 
 .story-panel {
-  position: absolute;
-  right: 0;
-  width: 48%;
-  min-height: 390px;
-  padding: 62px 58px;
-  border: 1px solid rgba(75, 88, 41, 0.2);
-  background: #fbfaf5;
-  color: #4b5829;
-  box-shadow: 0 8px 24px rgba(45, 50, 28, 0.08);
+  /* font-family  : timenew-roman; */
+  font-family  : 'DFVN Bropella';
+  line-height  : 47px;
+  position     : absolute;
+  left         : calc(var(--story-image-width) - var(--story-overlap));
+  width        : 48%;
+  min-height   : 390px;
+  padding      : 62px 58px;
+  border       : 1px solid rgba(75, 88, 41, 0.2);
+  border-radius: var(--story-panel-radius);
+  background   : #fbfaf5;
+  color        : #4b5829;
+  box-shadow   : 0 8px 24px rgba(45, 50, 28, 0.08);
 }
 
 .story-panel h2 {
-  margin: 0 0 24px;
-  font-size: 2.4rem;
+  margin     : 0 0 24px;
+  font-size  : 2.4rem;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.5;
 }
 
 .story-panel p {
   margin-bottom: 20px;
-  color: #59604b;
-  line-height: 1.7;
+  color        : #59604b;
+  line-height  : 1.7;
 }
 
 .story-link {
-  display: inline-block;
-  margin-top: 8px;
-  color: #4b5829;
-  font-weight: 700;
+  display        : inline-block;
+  margin-top     : 8px;
+  color          : #4b5829;
+  font-weight    : 700;
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
+  border-bottom  : 1px solid currentColor;
 }
 
 /* Product Carousel Section */

@@ -1,100 +1,99 @@
-﻿
-/* =========================================
+﻿/* =========================================
    ABOUT PAGE - NON SOI
 ========================================= */
 
 @font-face {
-    font-family: 'DFVN Bropella';
-    src: url('../fonts/DFVN%20Bropella.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-family : 'DFVN Bropella';
+    src         : url('../fonts/DFVN%20Bropella.ttf') format('truetype');
+    font-weight : normal;
+    font-style  : normal;
     font-display: swap;
 }
 
 :root {
     --about-background: var(--page-background);
-    --about-green: #315c34;
-    --about-text: #897f67;
+    --about-green     : #315c34;
+    --about-text      : #897f67;
 }
 
 .about-page {
-    width: 100%;
+    width           : 100%;
     background-color: var(--about-background);
 }
 
 .about-story {
-    width: 100%;
-    min-height: 600px;
-    padding: 75px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width           : 100%;
+    min-height      : 600px;
+    padding         : 75px 30px;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
     background-color: #f8f2c8;
-    text-align: center;
+    text-align      : center;
 }
 
 .about-container {
-    width: 100%;
-    max-width: 1050px;
-    margin: 0 auto;
-    display: flex;
+    width         : 100%;
+    max-width     : 1050px;
+    margin        : 0 auto;
+    display       : flex;
     flex-direction: column;
-    align-items: center;
+    align-items   : center;
 }
 
 /* Logo placeholder */
 .about-logo {
-    width: 100%;
-    max-width: 300px;
+    width        : 100%;
+    max-width    : 300px;
     margin-bottom: 25px;
 }
 
 .about-logo-image {
-    display: block;
-    width: 100%;
-    height: auto;
+    display   : block;
+    width     : 100%;
+    height    : auto;
     object-fit: contain;
 }
 
 /* Main title */
 .about-title {
-    width: 100%;
-    margin: 0 0 25px;
-    color: var(--about-green);
-    font-family: 'DFVN Bropella', Georgia, serif;
-    font-size: 2.8rem;
+    width              : 100%;
+    margin             : 0 0 25px;
+    color              : var(--about-green);
+    font-family        : 'DFVN Bropella', Georgia, serif;
+    font-size          : 2.8rem;
     -webkit-text-stroke: 0.7px var(--about-green);
-    line-height: 1.4;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-align: center;
+    line-height        : 1.4;
+    letter-spacing     : normal;
+    word-spacing       : normal;
+    text-align         : center;
 }
 
 /* Description */
 .about-description {
-    width: 100%;
-    max-width: 850px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
+    width         : 100%;
+    max-width     : 850px;
+    margin        : 0 auto;
+    font-family   : Arial, sans-serif;
     letter-spacing: normal;
-    word-spacing: normal;
+    word-spacing  : normal;
 }
 
-    .about-description p {
-        margin: 0 0 12px;
-        color: var(--about-text);
-        font-family: Arial, sans-serif;
-        font-size: 1.05rem;
-        font-weight: normal;
-        line-height: 1.8;
-        letter-spacing: normal;
-        word-spacing: normal;
-        text-align: center;
-    }
+.about-description p {
+    margin        : 0 0 12px;
+    color         : var(--about-text);
+    font-family   : Arial, sans-serif;
+    font-size     : 1.05rem;
+    font-weight   : normal;
+    line-height   : 1.8;
+    letter-spacing: normal;
+    word-spacing  : normal;
+    text-align    : center;
+}
 
-        .about-description p:last-child {
-            margin-bottom: 0;
-        }
+.about-description p:last-child {
+    margin-bottom: 0;
+}
 
 /* PC */
 
