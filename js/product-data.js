@@ -11,8 +11,8 @@
       "isNew": true,
       "isBestSeller": true,
       "name": "Áo choàng tắm",
-      "price": 990000,
-      "oldPrice": 1290000,
+      "price": 790000,
+      "oldPrice": 940000,
       "category": "robe",
       "categoryLabel": "Áo choàng tắm",
       "categoryPage": "bath-robes.html",
@@ -137,13 +137,13 @@
   window.NONSOI_PRODUCTS = PRODUCTS;
 
   window.getNonsoiProducts = function (category) {
-  if (!category) return PRODUCTS.slice();
-  return PRODUCTS.filter(function (p) {
-    return p.category === category;
-  });
-};
+    if (!category) return PRODUCTS.slice();
+    return PRODUCTS.filter(function (p) {
+      return p.category === category;
+    });
+  };
 
-window.findNonsoiProduct = function (id) {
-  return PRODUCTS.find(function (p) { return p.id === id; }) || null;
-};
+  window.findNonsoiProduct = function (id) {
+    return PRODUCTS.find(function (p) { return p.id === id; }) || null;
+  };
 })();

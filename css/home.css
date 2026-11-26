@@ -125,12 +125,44 @@
   margin-bottom  : 32px;
 }
 
+.new-products-logo-marquee {
+  width   : 100%;
+  overflow: hidden;
+}
+
+.new-products-logo-track {
+  display  : flex;
+  width    : max-content;
+  animation: new-products-logo-scroll 30s linear infinite;
+}
+
+.new-products-logo-group {
+  display      : flex;
+  flex         : 0 0 auto;
+  align-items  : center;
+  gap          : 250px;
+  padding-right: 250px;
+}
+
 .new-products-logo {
   display   : block;
+  flex      : 0 0 320px;
   width     : 320px;
-  max-width : 100%;
+  max-width : none;
   height    : auto;
   object-fit: contain;
+}
+
+@keyframes new-products-logo-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .new-products-logo-track {
+    animation: none;
+  }
 }
 
 .new-products-description {
@@ -145,13 +177,13 @@
 
 /* Product image only */
 .featured-product {
-  display      : block;
-  position     : relative;
-  height       : 320px;
-  overflow     : hidden;
-  border-radius: 14px;
-  cursor       : pointer;
-  background   : #eee;
+  display        : block;
+  position       : relative;
+  height         : 320px;
+  overflow       : hidden;
+  border-radius  : 14px;
+  cursor         : pointer;
+  background     : #eee;
   text-decoration: none;
 }
 
@@ -180,10 +212,10 @@
 /* Brand story section */
 .story-section {
   /* Chỉnh kích thước ảnh và bo góc panel tại đây */
-  --story-image-width     : 50%;
+  --story-image-width     : 55%;
   --story-image-height    : 500px;
   --story-panel-radius    : 12px;
-  --story-overlap         : 50px;
+  --story-overlap         : 20px;
   --story-horizontal-shift: 43px;
   position                : relative;
   display                 : flex;
@@ -212,14 +244,12 @@
 }
 
 .story-panel {
-  /* font-family  : timenew-roman; */
-  font-family  : 'DFVN Bropella';
   line-height  : 47px;
   position     : absolute;
   left         : calc(var(--story-image-width) - var(--story-overlap));
   width        : 48%;
   min-height   : 390px;
-  padding      : 62px 58px;
+  padding      : 20px 50px;
   border       : 1px solid rgba(75, 88, 41, 0.2);
   border-radius: var(--story-panel-radius);
   background   : #fbfaf5;
@@ -246,6 +276,43 @@
   font-weight    : 700;
   text-decoration: none;
   border-bottom  : 1px solid currentColor;
+}
+
+@media (max-width: 767px) {
+  .story-section {
+    --story-image-width     : 60%;
+    --story-image-height    : clamp(320px, 75vw, 420px);
+    --story-overlap         : 28px;
+    --story-horizontal-shift: 0px;
+    width                   : calc(100% - 32px);
+    min-height              : var(--story-image-height);
+    margin                  : 60px auto;
+    transform               : none;
+  }
+
+  .story-panel {
+    width     : 48%;
+    min-height: 390px;
+    padding   : clamp(16px, 4vw, 32px);
+  }
+
+  .story-panel h2 {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .story-panel p,
+  .story-link {
+    font-size  : clamp(0.75rem, 2.4vw, 1rem);
+    line-height: 1.45;
+  }
+
+  .story-panel p {
+    margin-bottom: 8px;
+  }
+
+  .story-link {
+    margin-top: 4px;
+  }
 }
 
 /* Product Carousel Section */

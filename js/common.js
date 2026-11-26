@@ -276,23 +276,44 @@ function initializeAnimations() {
     mainContent.classList.add('fade-in');
   }
 
-  // Animate cards on scroll
-  const cards = document.querySelectorAll('.card');
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  if (!('IntersectionObserver' in window)) return;
 
-  const cardObserver = new IntersectionObserver(function (entries) {
+  const revealSelector =
+    'main > *, main section, body > section, body > article, .card, .about-description > *';
+  const revealObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('slide-up');
-      }
+      entry.target.classList.toggle('is-visible', entry.isIntersecting);
     });
-  }, observerOptions);
+  }, {
+    threshold: 0,
+    rootMargin: '0px 0px -40px 0px'
+  });
 
-  cards.forEach(function (card) {
-    cardObserver.observe(card);
+  function observeRevealTargets(root) {
+    if (root.nodeType !== Node.ELEMENT_NODE && root.nodeType !== Node.DOCUMENT_NODE) return;
+
+    if (root.matches && root.matches(revealSelector) && !root.classList.contains('scroll-reveal')) {
+      root.classList.add('scroll-reveal');
+      revealObserver.observe(root);
+    }
+
+    root.querySelectorAll(revealSelector).forEach(function (target) {
+      if (target.classList.contains('scroll-reveal')) return;
+      target.classList.add('scroll-reveal');
+      revealObserver.observe(target);
+    });
+  }
+
+  observeRevealTargets(document);
+
+  const contentObserver = new MutationObserver(function (records) {
+    records.forEach(function (record) {
+      record.addedNodes.forEach(observeRevealTargets);
+    });
+  });
+  contentObserver.observe(document.body, {
+    childList: true,
+    subtree: true
   });
 }
 
