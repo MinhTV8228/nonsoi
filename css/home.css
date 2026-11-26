@@ -213,10 +213,9 @@
 .story-section {
   /* Chỉnh kích thước ảnh và bo góc panel tại đây */
   --story-image-width     : 55%;
-  --story-image-height    : 500px;
-  --story-panel-radius    : 12px;
-  --story-overlap         : 20px;
-  --story-horizontal-shift: 43px;
+  --story-image-height    : 800px;
+  --story-overlap         : 80px;
+  --story-horizontal-shift: 50px;
   position                : relative;
   display                 : flex;
   align-items             : center;
@@ -228,6 +227,8 @@
   margin-bottom           : 90px;
   background              : transparent;
   transform               : translateX(var(--story-horizontal-shift));
+  left                    : 30px;
+
 }
 
 .story-image-wrap {
@@ -276,43 +277,6 @@
   font-weight    : 700;
   text-decoration: none;
   border-bottom  : 1px solid currentColor;
-}
-
-@media (max-width: 767px) {
-  .story-section {
-    --story-image-width     : 60%;
-    --story-image-height    : clamp(320px, 75vw, 420px);
-    --story-overlap         : 28px;
-    --story-horizontal-shift: 0px;
-    width                   : calc(100% - 32px);
-    min-height              : var(--story-image-height);
-    margin                  : 60px auto;
-    transform               : none;
-  }
-
-  .story-panel {
-    width     : 48%;
-    min-height: 390px;
-    padding   : clamp(16px, 4vw, 32px);
-  }
-
-  .story-panel h2 {
-    font-size: clamp(1rem, 4vw, 1.5rem);
-  }
-
-  .story-panel p,
-  .story-link {
-    font-size  : clamp(0.75rem, 2.4vw, 1rem);
-    line-height: 1.45;
-  }
-
-  .story-panel p {
-    margin-bottom: 8px;
-  }
-
-  .story-link {
-    margin-top: 4px;
-  }
 }
 
 /* Product Carousel Section */
