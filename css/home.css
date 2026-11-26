@@ -168,7 +168,7 @@
 .new-products-description {
   /* Chỉnh độ giãn dòng tại đây */
   --new-products-description-line-height: 2;
-  max-width                             : 760px;
+  max-width                             : 910px;
   margin                                : 0 auto;
   color                                 : #fff;
   font-size                             : 18px;
