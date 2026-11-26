@@ -17,14 +17,11 @@
       "categoryLabel": "Áo choàng tắm",
       "categoryPage": "bath-robes.html",
       "detailPage": "bath-robe-detail.html",
-      "image": "images/bath_robe/bathrobe_1.jpg",
+      "image": "images/product/product-1.jpg",
       "images": [
-        "images/bath_robe/bathrobe_1.jpg",
-        "images/bath_robe/bathrobe_2.jpg",
-        "images/bath_robe/bathrobe_3.jpg",
-        "images/bath_robe/bathrobe_4.jpg",
-        "images/bath_robe/bathrobe_5.jpg",
-        "images/bath_robe/bathrobe_6.jpg"
+        "images/product/product-1.jpg",
+        "images/product/product-2.jpg",
+        "images/product/product-3.jpg"
       ],
       "care": "Giặt máy ở 30°C, không dùng chất tẩy mạnh, phơi nơi thoáng mát.",
     },

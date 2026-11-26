@@ -6,10 +6,11 @@
   --brand-green    : #32582b;
   --header-main    : #4C5929;
   --header-beige   : #fff;
-  --page-background: #F9F9C2;
+  --page-background: #fff;
 }
 
 body {
+  font-family     : 'Nunito', sans-serif;
   background-color: var(--page-background);
 }
 
@@ -171,10 +172,12 @@ body {
   color        : #e5e0ca;
 }
 
-.footer-contact i {
-  font-size: 21px;
-  min-width: 25px;
-  color    : #f5f0d8;
+.footer-contact .icon {
+  flex      : 0 0 25px;
+  width     : 25px;
+  height    : 25px;
+  object-fit: contain;
+  filter    : brightness(0) invert(1);
 }
 
 /* Cột 2 */
@@ -185,7 +188,7 @@ body {
 
 .footer-links h3,
 .footer-social h3 {
-  font-family  : Georgia, serif;
+  font-family  : 'Nunito', sans-serif;
   font-size    : 32px;
   font-weight  : 400;
   color        : #f5f0d8;
@@ -334,7 +337,7 @@ body {
   font-size     : clamp(3.5rem, 9vw, 7rem);
   font-weight   : 400;
   letter-spacing: 0.08em;
-  font-family   : "DFVN Bropella", Georgia, serif;
+  font-family   : "DFVN Bropella", 'Nunito', sans-serif;
 }
 
 .hero-text {
@@ -397,7 +400,6 @@ body {
   align-items    : center;
   justify-content: center;
   text-align     : center;
-  padding        : 30px 0;
   margin-bottom  : 32px;
 }
 
@@ -407,7 +409,6 @@ body {
   max-width : 80%;
   height    : auto;
   object-fit: contain;
-  margin    : 0 auto 15px;
 }
 
 /* Product image only */

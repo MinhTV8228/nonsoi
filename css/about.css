@@ -60,7 +60,7 @@
     width              : 100%;
     margin             : 0 0 25px;
     color              : var(--about-green);
-    font-family        : 'DFVN Bropella', Georgia, serif;
+    font-family        : 'DFVN Bropella', 'Nunito', sans-serif;
     font-size          : 2.8rem;
     -webkit-text-stroke: 0.7px var(--about-green);
     line-height        : 1.4;
@@ -74,7 +74,7 @@
     width         : 100%;
     max-width     : 850px;
     margin        : 0 auto;
-    font-family   : Arial, sans-serif;
+    font-family   : 'Nunito', sans-serif;
     letter-spacing: normal;
     word-spacing  : normal;
 }
@@ -82,7 +82,7 @@
 .about-description p {
     margin        : 0 0 12px;
     color         : var(--about-text);
-    font-family   : Arial, sans-serif;
+    font-family   : 'Nunito', sans-serif;
     font-size     : 1.05rem;
     font-weight   : normal;
     line-height   : 1.8;
