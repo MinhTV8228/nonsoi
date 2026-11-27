@@ -190,15 +190,16 @@ body {
 }
 
 .footer-logo {
-  height    : 65px;
-  width     : auto;
-  max-width : 220px;
-  object-fit: contain;
+  height       : 85px;
+  width        : auto;
+  /* max-width : 220px; */
+  object-fit   : contain;
 }
 
 .footer-slogan {
   font-family  : 'DFVN Bropella', 'Nunito', sans-serif;
-  font-size    : 13px;
+  font-size    : 18x;
+  margin-left  : 20px;
   margin-bottom: 18px;
   color        : #e5e0ca;
 }
