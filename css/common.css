@@ -182,11 +182,10 @@ body {
 }
 
 .footer-logo {
-  height       : 65px;
-  width        : auto;
-  max-width    : 220px;
-  object-fit   : contain;
-  margin-bottom: 8px;
+  height    : 65px;
+  width     : auto;
+  max-width : 220px;
+  object-fit: contain;
 }
 
 .footer-slogan {
