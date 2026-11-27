@@ -2,6 +2,14 @@
  * Shared site styles
  */
 
+@font-face {
+  font-family : 'DFVN Bropella';
+  src         : url('../fonts/DFVN%20Bropella.ttf') format('truetype');
+  font-weight : normal;
+  font-style  : normal;
+  font-display: swap;
+}
+
 :root {
   --brand-green    : #32582b;
   --header-main    : #4C5929;
@@ -189,6 +197,7 @@ body {
 }
 
 .footer-slogan {
+  font-family  : 'DFVN Bropella', 'Nunito', sans-serif;
   font-size    : 13px;
   margin-bottom: 18px;
   color        : #e5e0ca;
