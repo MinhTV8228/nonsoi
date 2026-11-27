@@ -26,6 +26,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .scroll-reveal,
   .scroll-reveal.is-visible {
     opacity   : 1;
@@ -322,84 +323,6 @@ body {
 
 .user-dropdown-menu .dropdown-item:hover {
   background-color: rgba(75, 88, 41, 0.1);
-}
-
-/* Hero Section Styles */
-.hero-section {
-  position       : relative;
-  min-height     : 620px;
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
-  overflow       : hidden;
-  background     :
-    linear-gradient(90deg, rgba(28, 38, 17, 0.62), rgba(28, 38, 17, 0.12)),
-    url("../images/bath_towel/bathtowel_3.jpg") center/cover no-repeat;
-}
-
-.hero-content {
-  width      : min(1120px, 100%);
-  padding    : 120px 24px;
-  color      : #fff;
-  text-align : center;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-}
-
-.hero-eyebrow {
-  margin-bottom : 14px;
-  font-size     : 0.85rem;
-  letter-spacing: 0.3em;
-  font-weight   : 600;
-}
-
-.hero-content h1 {
-  margin-bottom : 18px;
-  font-size     : clamp(3.5rem, 9vw, 7rem);
-  font-weight   : 400;
-  letter-spacing: 0.08em;
-  font-family   : "DFVN Bropella", 'Nunito', sans-serif;
-}
-
-.hero-text {
-  max-width: 540px;
-  margin   : 0 auto 30px;
-  font-size: 1.05rem;
-}
-
-.hero-button {
-  display        : inline-block;
-  padding        : 12px 24px;
-  border         : 1px solid #fff;
-  border-radius  : 999px;
-  color          : #334020;
-  background     : #f8f9c2;
-  text-decoration: none;
-  text-shadow    : none;
-  transition     : transform 0.25s ease, background-color 0.25s ease;
-}
-
-.hero-button:hover {
-  color     : #334020;
-  background: #fff;
-  transform : translateY(-2px);
-}
-
-/* Banner Section Styles */
-.banner-section {
-  position: relative;
-}
-
-.banner-section .banner-image {
-  display: block;
-  /* Show by default */
-}
-
-.banner-section .banner-content {
-  position    : absolute;
-  top         : 50%;
-  left        : 0;
-  transform   : translateY(-50%);
-  padding-left: 3rem;
 }
 
 /* New Products section */
