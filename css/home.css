@@ -198,6 +198,15 @@
   transition: transform 0.45s ease;
 }
 
+.row[aria-label="Ảnh áo choàng tắm"] .col:nth-child(2) img {
+  object-position: calc(50% + 60px) center;
+}
+
+.row[aria-label="Ảnh áo choàng tắm"] .col:nth-child(3) img {
+  object-position: calc(50% - 100px) center;
+}
+
+
 .featured-product:hover .featured-product-image {
   transform: scale(1.06);
 }
