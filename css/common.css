@@ -78,24 +78,25 @@ body {
 }
 
 .navbar-nav {
-  grid-column     : 1;
-  --nav-link-gap  : 14px;
-  position        : static;
-  display         : flex;
-  width           : max-content;
-  max-width       : 100%;
-  align-items     : center;
-  justify-content : center;
-  justify-self    : center;
-  gap             : var(--nav-link-gap) !important;
-  flex-wrap       : nowrap;
-  text-align      : center;
-  white-space     : nowrap;
-  margin          : 0;
-  padding         : 6px 10px;
-  border-radius   : 999px;
-  background-color: transparent;
-  border          : 1px solid var(--header-main);
+  grid-column        : 1;
+  --nav-link-gap     : 14px;
+  position           : static;
+  display            : flex;
+  width              : max-content;
+  max-width          : 100%;
+  align-items        : center;
+  justify-content    : center;
+  justify-self       : center;
+  transform          : translateX(-30px);
+  /* gap             : var(--nav-link-gap) !important; */
+  flex-wrap          : nowrap;
+  text-align         : center;
+  white-space        : nowrap;
+  margin             : 0;
+  padding            : 6px 10px;
+  border-radius      : 999px;
+  background-color   : transparent;
+  border             : 1px solid var(--header-main);
 }
 
 .icon-group {
@@ -220,6 +221,7 @@ body {
 /* Cột 2 */
 .footer-links {
   padding-left: 55px;
+  padding-top : 12px;
   border-right: 1px solid rgba(245, 240, 216, 0.2);
 }
 
@@ -263,6 +265,7 @@ body {
 /* Cột 3 */
 .footer-social {
   padding-left: 40px;
+  padding-top : 12px;
 }
 
 .social-icon {

@@ -81,10 +81,10 @@
 /* New Products section */
 .new-products {
   /* Bung section ra toàn bộ chiều ngang màn hình */
-  width           : 100vw;
+  width           : 100%;
   max-width       : none;
-  margin-left     : calc(50% - 50vw);
-  margin-right    : calc(50% - 50vw);
+  margin-left     : 0;
+  margin-right    : 0;
   padding-bottom  : 10px;
   background-color: #4c5a29;
   border-radius   : 0;
@@ -218,7 +218,7 @@
   --story-image-width     : 55%;
   --story-image-height    : 800px;
   --story-overlap         : 80px;
-  --story-horizontal-shift: 50px;
+  --story-horizontal-shift: 18px;
   position                : relative;
   display                 : flex;
   align-items             : center;
