@@ -183,9 +183,11 @@
   flex-shrink    : 0;
 }
 
-.contact-icon i {
-  color    : white;
-  font-size: 1.2rem;
+.contact-icon img {
+  width     : 25px;
+  height    : 25px;
+  object-fit: contain;
+  filter    : brightness(0) invert(1);
 }
 
 .contact-text h5 {

@@ -12,7 +12,6 @@
       "isBestSeller": true,
       "name": "Áo choàng tắm",
       "price": 890000,
-      // "oldPrice": 940000,
       "category": "robe",
       "categoryLabel": "Áo choàng tắm",
       "categoryPage": "bath-robes.html",

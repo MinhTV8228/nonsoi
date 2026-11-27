@@ -10,6 +10,10 @@ class CartTrang {
   }
 
   init() {
+    window.addEventListener('pagehide', () => {
+      localStorage.removeItem('Nõn Sợi_cart');
+    });
+
     // Wait for cart manager to be ready
     setTimeout(() => {
       this.loadCartItems();

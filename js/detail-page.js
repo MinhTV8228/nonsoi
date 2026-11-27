@@ -222,18 +222,23 @@
   }
 
   function bindActions(product) {
-    const cartBtn = document.getElementById('detail-add-cart');
-    if (cartBtn && !cartBtn.dataset.bound) {
-      cartBtn.dataset.bound = '1';
-      cartBtn.addEventListener('click', function () {
-        if (typeof window.addToCart === 'function') {
-          window.addToCart(product.id, product.name, product.price, product.image, false);
+    const buyNowBtn = document.getElementById('detail-buy-now');
+    if (buyNowBtn && !buyNowBtn.dataset.bound) {
+      buyNowBtn.dataset.bound = '1';
+      buyNowBtn.addEventListener('click', function () {
+        if (
+          !window.cartManager ||
+          typeof window.cartManager.clearCart !== 'function' ||
+          typeof window.addToCart !== 'function'
+        ) {
+          console.error('Cart is unavailable; cannot start checkout.');
+          window.showSiteToast('Không thể bắt đầu thanh toán. Vui lòng thử lại.', 'error');
+          return;
         }
-        const note = document.getElementById('detail-selected-size');
-        if (note) {
-          const size = selectedSize();
-          note.textContent = 'Đã thêm vào giỏ' + (size ? ' - kích thước ' + size : '') + '.';
-        }
+
+        window.cartManager.clearCart();
+        window.addToCart(product.id, product.name, product.price, product.image, false);
+        window.location.href = 'cart.html';
       });
     }
 
