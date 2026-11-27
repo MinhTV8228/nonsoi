@@ -2,29 +2,29 @@
 
 /* Feedback Flex Container - Giống như About us */
 .feedback-flex-container {
-  display: flex;
+  display    : flex;
   align-items: flex-start;
-  gap: 8px;
-  min-height: 500px;
+  gap        : 8px;
+  min-height : 500px;
 }
 
 .feedback-main-content {
-  flex: 1;
+  flex     : 1;
   min-width: 0;
   max-width: 800px;
-  margin: 0 auto;
+  margin   : 0 auto;
 }
 
 .feedback-image-left,
 .feedback-image-right {
   flex-shrink: 0;
-  width: 400px;
+  width      : 400px;
 }
 
 .feedback-image-left img,
 .feedback-image-right img {
-  width: 100%;
-  max-width: 400px;
+  width     : 100%;
+  max-width : 400px;
   min-height: 450px;
   object-fit: cover;
 }
@@ -35,158 +35,165 @@
 /* Feedback Header */
 .feedback-header {
   background: var(--page-background);
-  padding: 60px 0;
+  padding   : 60px 0;
   text-align: center;
 }
 
 .feedback-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
+  font-size    : 2.5rem;
+  font-weight  : bold;
+  color        : #333;
   margin-bottom: 10px;
 }
 
 .feedback-subtitle {
-  font-size: 1.1rem;
-  color: #007bff; /* Bootstrap blue */
+  font-size    : 1.1rem;
+  color        : #007bff;
+  /* Bootstrap blue */
   margin-bottom: 30px;
 }
 
 /* Overall Rating Section */
 .overall-rating {
   background: var(--page-background);
-  padding: 40px 0;
+  padding   : 40px 0;
   text-align: center;
 }
 
 .rating-display {
   max-width: 500px;
-  margin: 0 auto;
+  margin   : 0 auto;
 }
 
 .rating-number {
-  font-size: 4rem;
-  font-weight: bold;
-  color: #333;
+  font-size    : 4rem;
+  font-weight  : bold;
+  color        : #333;
   margin-bottom: 10px;
 }
 
 .rating-stars {
-  font-size: 1.5rem;
-  color: #ffc107;
+  font-size    : 1.5rem;
+  color        : #ffc107;
   margin-bottom: 10px;
 }
 
 .rating-text {
-  font-size: 1.1rem;
-  color: #666;
+  font-size    : 1.1rem;
+  color        : #666;
   margin-bottom: 5px;
 }
 
 .rating-count {
   font-size: 0.9rem;
-  color: #888;
+  color    : #888;
 }
 
 /* Filter Section */
 .filter-section {
-  background: var(--page-background);
-  padding: 20px 0;
+  background   : var(--page-background);
+  padding      : 20px 0;
   border-bottom: 1px solid #eee;
 }
 
 .filter-container {
-  display: flex;
-  gap: 15px;
+  display        : flex;
+  gap            : 15px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap      : wrap;
 }
 
 .filter-btn {
-  padding: 8px 20px;
-  border: 1px solid #ddd;
-  border-radius: 25px;
-  color: #666;
+  padding        : 8px 20px;
+  border         : 1px solid #ddd;
+  border-radius  : 25px;
+  color          : #666;
   text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
+  transition     : all 0.3s ease;
+  font-size      : 0.9rem;
 }
 
 .filter-btn:hover,
 .filter-btn.active {
-  background: #007bff;
-  color: white;
-  border-color: #007bff;
+  background     : #007bff;
+  color          : white;
+  border-color   : #007bff;
   text-decoration: none;
 }
 
 /* Reviews Section */
 .reviews-section {
-  padding: 50px 0;
+  padding   : 50px 0;
   background: var(--page-background);
 }
 
 /* Container for reviews to prevent overlap */
 .py-5 {
-  position: relative;
-  overflow: hidden; /* Prevent any overflow issues */
+  position  : relative;
+  overflow  : hidden;
+  /* Prevent any overflow issues */
   background: var(--page-background);
 }
 
 .section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
+  text-align   : center;
+  font-size    : 2rem;
+  font-weight  : bold;
+  color        : #333;
   margin-bottom: 40px;
 }
 
 .reviews-grid {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  /* gap: px; Consistent gap between cards */
-  width: 100%;
+  /* gap        : px; Consistent gap between cards */
+  width         : 100%;
 }
 
 /* Review Cards */
 .review-card {
-  background: white;
+  background   : white;
   border-radius: 15px;
-  padding: 25px;
-  margin-bottom: 30px; /* Add consistent bottom margin */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative; /* Ensure proper positioning */
-  z-index: 1; /* Prevent overlap */
-  width: 100%; /* Ensure full width */
-  box-sizing: border-box; /* Include padding in width calculation */
+  padding      : 25px;
+  margin-bottom: 30px;
+  /* Add consistent bottom margin */
+  box-shadow   : 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition   : transform 0.3s ease, box-shadow 0.3s ease;
+  position     : relative;
+  /* Ensure proper positioning */
+  z-index      : 1;
+  /* Prevent overlap */
+  width        : 100%;
+  /* Ensure full width */
+  box-sizing   : border-box;
+  /* Include padding in width calculation */
 }
 
 .review-card:hover {
-  transform: translateY(-2px);
+  transform : translateY(-2px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Review Header */
 .review-header {
-  display: flex;
-  align-items: center;
+  display      : flex;
+  align-items  : center;
   margin-bottom: 15px;
-  gap: 15px;
+  gap          : 15px;
 }
 
 .reviewer-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width           : 50px;
+  height          : 50px;
+  border-radius   : 50%;
   background-color: #007bff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-  flex-shrink: 0;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  color           : white;
+  font-weight     : bold;
+  font-size       : 1.1rem;
+  flex-shrink     : 0;
 }
 
 .reviewer-info {
@@ -194,15 +201,15 @@
 }
 
 .reviewer-info h5 {
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-weight  : bold;
+  font-size    : 1.1rem;
   margin-bottom: 2px;
-  color: #333;
+  color        : #333;
 }
 
 .reviewer-date {
   font-size: 0.85rem;
-  color: #888;
+  color    : #888;
 }
 
 .review-rating {
@@ -210,14 +217,14 @@
 }
 
 .review-stars {
-  color: #ffc107;
-  font-size: 0.9rem;
+  color        : #ffc107;
+  font-size    : 0.9rem;
   margin-bottom: 2px;
 }
 
 .review-score {
-  font-size: 0.85rem;
-  color: #666;
+  font-size  : 0.85rem;
+  color      : #666;
   font-weight: 500;
 }
 
@@ -227,115 +234,113 @@
 }
 
 .review-product {
-  font-weight: 600;
-  color: #007bff;
+  font-weight  : 600;
+  color        : #007bff;
   margin-bottom: 10px;
-  font-size: 0.9rem;
+  font-size    : 0.9rem;
 }
 
 .review-text {
-  color: #555;
-  line-height: 1.6;
+  color        : #555;
+  line-height  : 1.6;
   margin-bottom: 15px;
-  font-size: 0.95rem;
+  font-size    : 0.95rem;
 }
 
 /* Review Actions */
 .review-actions {
-  display: flex;
+  display        : flex;
   justify-content: space-between;
-  align-items: center;
+  align-items    : center;
 }
 
 .review-helpful {
   display: flex;
-  gap: 10px;
+  gap    : 10px;
 }
 
 .helpful-btn {
-  background: none;
-  border: 1px solid #ddd;
-  padding: 5px 12px;
+  background   : none;
+  border       : 1px solid #ddd;
+  padding      : 5px 12px;
   border-radius: 20px;
-  color: #666;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  color        : #666;
+  font-size    : 0.8rem;
+  cursor       : pointer;
+  transition   : all 0.2s ease;
+  display      : flex;
+  align-items  : center;
+  gap          : 5px;
 }
 
 .helpful-btn:hover {
   border-color: #007bff;
-  color: #007bff;
+  color       : #007bff;
 }
 
 .helpful-btn.active {
-  background: #007bff;
-  color: white;
+  background  : #007bff;
+  color       : white;
   border-color: #007bff;
 }
 
 .review-share {
-  color: #666;
+  color          : #666;
   text-decoration: none;
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transition: color 0.2s ease;
+  font-size      : 0.8rem;
+  display        : flex;
+  align-items    : center;
+  gap            : 5px;
+  transition     : color 0.2s ease;
 }
 
 .review-share:hover {
-  color: #007bff;
+  color          : #007bff;
   text-decoration: none;
 }
 
 /* Add Review Section */
 .add-review-section {
   background: var(--page-background);
-  padding: 50px 0;
+  padding   : 50px 0;
 }
 
 .add-review-card {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px;
-  background: #f8f9fa;
+  text-align   : center;
+  max-width    : 600px;
+  margin       : 0 auto;
+  padding      : 40px;
+  background   : #f8f9fa;
   border-radius: 15px;
 }
 
 .add-review-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
+  font-size    : 1.8rem;
+  font-weight  : bold;
+  color        : #333;
   margin-bottom: 15px;
 }
 
 .add-review-text {
-  color: #666;
+  color        : #666;
   margin-bottom: 25px;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size    : 1rem;
+  line-height  : 1.6;
 }
 
 .btn-add-review {
-  background: #007bff;
-  border: none;
-  color: white;
-  padding: 12px 30px;
+  background   : #007bff;
+  border       : none;
+  color        : white;
+  padding      : 12px 30px;
   border-radius: 25px;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-size    : 1rem;
+  font-weight  : 500;
+  transition   : all 0.3s ease;
 }
 
 .btn-add-review:hover {
   background: #0056b3;
-  transform: translateY(-2px);
+  transform : translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
-
-/* Responsive Design */

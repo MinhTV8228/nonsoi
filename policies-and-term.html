@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <title>Chính sách & Điều khoản - Khăn & Áo choàng tắm Nõn Sợi</title>
 
   <!-- Bootstrap + Icons -->
@@ -350,52 +351,6 @@
           $('html, body').stop().animate({
             scrollTop: target.offset().top - 100
           }, 800);
-        }
-      });
-
-      // Make sidebar sticky on scroll and highlight current section
-      $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        var sidebar = $('.quick-links');
-
-        // Store original width before making sticky
-        if (!sidebar.data('original-width')) {
-          sidebar.data('original-width', sidebar.outerWidth());
-        }
-
-        // Add sticky class when scrolling
-        if (scroll >= 300) {
-          if (!sidebar.hasClass('sticky')) {
-            sidebar.addClass('sticky');
-
-            // Maintain original width when sticky
-            sidebar.css('width', sidebar.data('original-width') + 'px');
-          }
-        } else {
-          if (sidebar.hasClass('sticky')) {
-            sidebar.removeClass('sticky');
-
-            // Remove inline width style
-            sidebar.css('width', '');
-          }
-        }
-
-        // Highlight current section in sidebar
-        $('.terms-section').each(function (i) {
-          if ($(this).offset().top <= scroll + 150) {
-            $('.quick-links-list a.active').removeClass('active');
-            $('.quick-links-list a').eq(i).addClass('active');
-          }
-        });
-      });
-
-      // Handle window resize to update width
-      $(window).resize(function () {
-        var sidebar = $('.quick-links');
-
-        if (!sidebar.hasClass('sticky')) {
-          // Update stored width when not sticky
-          sidebar.data('original-width', sidebar.outerWidth());
         }
       });
     });
