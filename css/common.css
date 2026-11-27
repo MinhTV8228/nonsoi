@@ -59,7 +59,9 @@ body {
 }
 
 .navbar>.container-fluid {
-  display: flex;
+  display              : grid;
+  align-items          : center;
+  grid-template-columns: 200px minmax(0, 1fr) 70px;
 }
 
 .navbar-brand {
@@ -67,25 +69,24 @@ body {
   margin-right: 0 !important;
 }
 
-.navbar-collapse {
-  display        : flex !important;
-  flex           : 1 1 auto;
-  justify-content: space-between;
-  gap            : 24px;
+.navbar.navbar-expand-lg .navbar-collapse {
+  display              : grid !important;
+  grid-column          : 2 / 4;
+  grid-template-columns: minmax(0, 1fr) 70px;
+  align-items          : center;
+  gap                  : 12px;
 }
 
 .navbar-nav {
-  --nav-link-gap  : 90px;
-  position        : absolute;
-  top             : 50%;
-  left            : 50%;
+  grid-column     : 1;
+  --nav-link-gap  : 14px;
+  position        : static;
   display         : flex;
-  flex            : 0 0 auto;
   width           : max-content;
-  min-width       : max-content;
-  max-width       : none;
+  max-width       : 100%;
   align-items     : center;
   justify-content : center;
+  justify-self    : center;
   gap             : var(--nav-link-gap) !important;
   flex-wrap       : nowrap;
   text-align      : center;
@@ -95,13 +96,14 @@ body {
   border-radius   : 999px;
   background-color: transparent;
   border          : 1px solid var(--header-main);
-  transform       : translate(-50%, -50%);
 }
 
 .icon-group {
+  grid-column  : 2;
+  justify-self : end;
   flex         : 0 0 auto;
-  margin-left  : auto !important;
-  padding-right: 12px;
+  margin       : 0 !important;
+  padding-right: 8px;
   background   : transparent;
   position     : relative;
   z-index      : 2;
@@ -113,18 +115,32 @@ body {
 }
 
 .navbar .nav-link {
-  white-space: nowrap;
-  font-size  : 18px;
-  font-weight: 600;
+  white-space  : nowrap;
+  font-size    : 18px;
+  font-weight  : 600;
+  min-width    : 130px;
+  padding      : 8px 12px;
+  text-align   : center;
+  border-radius: 999px;
+  transition   : color 0.2s ease, background-color 0.2s ease;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link:focus,
+.navbar-nav .nav-item:last-child .nav-link {
+  min-width: 220px;
+}
+
 .navbar .nav-link.active,
 .navbar .nav-link[aria-current="page"],
 .navbar .user-icon:hover,
 .navbar .user-icon:focus {
   color: var(--header-main) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible,
+.navbar .nav-link.show {
+  color           : #F9F9C2 !important;
+  background-color: #4C5929;
 }
 
 .navbar .user-icon {
