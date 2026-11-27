@@ -18,7 +18,7 @@
 .contact-header .contact-main-content {
   flex      : 1;
   min-width : 0;
-  max-width : 600px;
+  max-width : 610px;
   margin    : 0 auto;
   text-align: center;
 }
@@ -57,8 +57,8 @@
 .contact-subtitle {
   font-size  : 1.4rem;
   color      : #4C5929;
-  /* Bootstrap blue */
-  max-width  : 600px;
+  width      : 100%;
+  max-width  : 610px;
   margin     : 0 auto;
   line-height: 1.6;
 }
