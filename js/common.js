@@ -10,11 +10,11 @@ window.parsePrice = function (value) {
 };
 
 window.formatVND = function (value) {
-  return new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 0 }).format(window.parsePrice(value)) + ' ₫';
+  return new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 0 }).format(window.parsePrice(value)) + ' VND';
 };
 
 window.formatVNDHTML = function (value) {
-  return new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 0 }).format(window.parsePrice(value)) + ' <span class="currency-symbol">₫</span>';
+  return new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 0 }).format(window.parsePrice(value)) + ' <span class="currency-symbol"> VND</span>';
 };
 
 window.showSiteToast = function (message, type) {
