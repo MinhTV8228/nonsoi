@@ -1,5 +1,5 @@
 ﻿/**
- * Home page specific styles
+ * Shared site styles
  */
 
 :root {
@@ -325,67 +325,6 @@ body {
   background-color: rgba(75, 88, 41, 0.1);
 }
 
-/* New Products section */
-.new-products {
-  background-color: #4c5a29;
-  border-radius   : 14px;
-}
-
-.new-products .row {
-  row-gap: 24px;
-}
-
-/* Header: logo lớn và nội dung căn giữa */
-.new-products-header {
-  width          : 100%;
-  display        : flex;
-  flex-direction : column;
-  align-items    : center;
-  justify-content: center;
-  text-align     : center;
-  margin-bottom  : 32px;
-}
-
-.new-products-logo {
-  display   : block;
-  width     : 220px;
-  max-width : 80%;
-  height    : auto;
-  object-fit: contain;
-}
-
-/* Product image only */
-.featured-product {
-  position     : relative;
-  height       : 360px;
-  overflow     : hidden;
-  border-radius: 14px;
-  cursor       : pointer;
-  background   : #eee;
-}
-
-.featured-product:focus-visible {
-  outline       : 3px solid #4b5829;
-  outline-offset: 4px;
-}
-
-.featured-product-image {
-  display   : block;
-  width     : 100%;
-  height    : 100%;
-  object-fit: cover;
-  transition: transform 0.45s ease;
-}
-
-.featured-product:hover .featured-product-image {
-  transform: scale(1.06);
-}
-
-/* Không hiển thị overlay, tên sản phẩm hoặc nút thao tác */
-.featured-product-overlay {
-  display: none;
-}
-
 /* Product Carousel Section */
 .product-carousel-section {
   padding   : 60px 0;
@@ -475,9 +414,6 @@ body {
 .carousel-control-next {
   right: -50px;
 }
-
-/* Responsive carousel controls */
-
 
 /* Category Sections */
 .category-section {
@@ -577,36 +513,4 @@ body {
   background: linear-gradient(45deg, #c2185b, #ad1457);
   transform : translateY(-2px);
   box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
-}
-
-/* Hover effect for Order Now buttons in carousel sections */
-#carouselWomen .btn-dark:hover,
-#carouselMen .btn-dark:hover {
-  background-color: white !important;
-  color           : #333 !important;
-  border-color    : #333 !important;
-  transition      : all 0.3s ease;
-}
-
-#carouselWomen .btn-dark,
-#carouselMen .btn-dark {
-  transition: all 0.3s ease;
-}
-
-/* Hover effect for Add to cart buttons in New Products section */
-.new-products .btn-outline-dark {
-  background-color: #333 !important;
-  color           : white !important;
-  border-color    : #333 !important;
-  transition      : all 0.3s ease;
-  min-width       : 110px;
-  /* Fixed minimum width to prevent layout shift */
-  text-align      : center;
-}
-
-.new-products .btn-outline-dark:hover {
-  background-color: white !important;
-  color           : #333 !important;
-  border-color    : #333 !important;
-  transition      : all 0.3s ease;
 }
