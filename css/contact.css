@@ -303,7 +303,7 @@
 
 .btn-send {
   background   : #4C5929;
-  color        : #F9F9C2;
+  color        : #fff;
   border       : none;
   padding      : 15px 40px;
   border-radius: 25px;
@@ -314,7 +314,9 @@
   margin-top   : auto;
 }
 
-.btn-send:hover {
+.btn-send:hover,
+.btn-send:focus,
+.btn-send:active {
   background: #4C5929;
   color     : #fff;
   transform : translateY(-2px);
